@@ -12,7 +12,7 @@ export class VendorListComponent implements OnInit {
 
   vendors: Vendor[] = [];
 
-  searchCriteria: String = '';
+  searchCriteria: string = '';
 
   constructor(
     private vendor: VendorService

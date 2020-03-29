@@ -1,7 +1,7 @@
 <app-menu></app-menu>
-<label></label>
+<label>User List </label> |
 <a routerLink="/users/create">Create</a>
-<input [(ngModel)]="searchCriteria" type="text">
+<input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 <div class="component">
     <table class="table table-sm">
         <tr>
@@ -13,7 +13,7 @@
             <th>IsAdmin</th>
 
         </tr>
-        <tr *ngFor="let u of users">
+        <tr *ngFor="let u of users | userSearch: searchCriteria">
             <td>{{u.id}}</td>
             <td>{{u.firstname}} {{u.lastname}}</td>
             <td>{{u.phone}}</td>
