@@ -38,7 +38,7 @@ export class UserEditComponent implements OnInit {
         console.debug("User:",res);
       },
       err => {
-        console.error("error editing User:",err)
+        console.error("Error editing User:",err)
       }
     )
   }
