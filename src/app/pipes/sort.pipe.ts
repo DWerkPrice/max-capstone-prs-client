@@ -21,5 +21,4 @@ export class SortPipe implements PipeTransform {
     if(typeof colValue == "number") return colValue;
     return colValue.toString().toLowerCase();
   }
-
 }

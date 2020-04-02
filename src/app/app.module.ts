@@ -22,10 +22,17 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductSearchPipe } from './pipes/product-search.pipe';
-import { ReuqestListComponent } from './request/reuqest-list/reuqest-list.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestSearchPipe } from './pipes/request-search.pipe';
+import { SystemServiceComponent } from './system-service/system-service/system-service.component';
+import { RequestlineListComponent } from './requestline/requestline-list/requestline-list.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineDetailComponent } from './requestline/requestline-detail/requestline-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -47,10 +54,16 @@ import { RequestCreateComponent } from './request/request-create/request-create.
     ProductEditComponent,
     ProductCreateComponent,
     ProductSearchPipe,
-    ReuqestListComponent,
+    RequestListComponent,
     RequestDetailComponent,
     RequestEditComponent,
     RequestCreateComponent,
+    RequestSearchPipe,
+    SystemServiceComponent,
+    RequestlineListComponent,
+    RequestlineEditComponent,
+    RequestlineCreateComponent,
+    RequestlineDetailComponent
   ],
   imports: [
     BrowserModule,

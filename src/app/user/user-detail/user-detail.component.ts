@@ -12,7 +12,14 @@ export class UserDetailComponent implements OnInit {
   
   user: User = new User();
 
-
+  myConfirm() {
+    let result = confirm("Want to delete?");
+    if (result==true) {
+     this.delete();
+    } else {
+     return false;
+    }
+  }
   delete(): void {
     this.usersvc.remove(this.user).subscribe(
       res => {

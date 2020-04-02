@@ -13,6 +13,14 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestlineListComponent } from './requestline/requestline-list/requestline-list.component';
+import { RequestlineDetailComponent } from './requestline/requestline-detail/requestline-detail.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
 
 const routes: Routes = [
@@ -29,6 +37,14 @@ const routes: Routes = [
   {path:"products/detail/:id",component: ProductDetailComponent},
   {path:"products/create",component: ProductCreateComponent},
   {path:"products/edit/:id",component: ProductEditComponent},
+  {path:"requests/list",component: RequestListComponent},
+  {path:"requests/detail/:id",component: RequestDetailComponent},
+  {path:"requests/create",component: RequestCreateComponent},
+  {path:"requests/edit/:id",component: RequestEditComponent},
+  {path:"requestlines/list",component: RequestlineListComponent},
+  {path:"requestlines/detail/:id",component: RequestlineDetailComponent},
+  {path:"requestlines/create",component: RequestlineCreateComponent},
+  {path:"requestlines/edit/:id",component: RequestlineEditComponent},
   {path:"**",component: UserListComponent}
 ];
 
