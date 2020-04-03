@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserListComponent } from './user/user-list/user-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
@@ -23,9 +24,12 @@ import { RequestlineCreateComponent } from './requestline/requestline-create/req
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
 
+
 const routes: Routes = [
-  {path:"", redirectTo:"/users/list", pathMatch: "full"},
+//  {path:"", redirectTo:"/users/list", pathMatch: "full"},
+  {path:"", component: UserLoginComponent},
   {path:"users/list",component: UserListComponent},
+  {path: "users/login/:username/:password", component: UserLoginComponent},
   {path:"users/detail/:id",component: UserDetailComponent},
   {path:"users/create",component: UserCreateComponent},
   {path:"users/edit/:id",component: UserEditComponent},

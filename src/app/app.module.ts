@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user/user-list/user-list.component';
@@ -27,22 +26,23 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestSearchPipe } from './pipes/request-search.pipe';
-import { SystemServiceComponent } from './system-service/system-service/system-service.component';
 import { RequestlineListComponent } from './requestline/requestline-list/requestline-list.component';
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 import { RequestlineDetailComponent } from './requestline/requestline-detail/requestline-detail.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
+    UserLoginComponent,
     UserDetailComponent,
     UserCreateComponent,
     UserEditComponent,
-    MenuComponent,
     UserSearchPipe,
+    MenuComponent,
     SortPipe,
     VendorListComponent,
     VendorDetailComponent,
@@ -59,7 +59,6 @@ import { RequestlineDetailComponent } from './requestline/requestline-detail/req
     RequestEditComponent,
     RequestCreateComponent,
     RequestSearchPipe,
-    SystemServiceComponent,
     RequestlineListComponent,
     RequestlineEditComponent,
     RequestlineCreateComponent,

@@ -10,7 +10,7 @@ export class SortPipe implements PipeTransform {
     let sortFn = (a: any ,b: any): number => {
       let x = this.setValue(a[sortBy]);
       let y = this.setValue(b[sortBy]);
-      if(x ===y) return 0;
+      if(x === y) return 0;
       return (x < y) ? -1 : 1; 
     };
 
