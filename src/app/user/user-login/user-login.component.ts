@@ -12,21 +12,22 @@ import { Router } from '@angular/router';
 })
 export class UserLoginComponent implements OnInit {
   user: User = new User();
-  message: string = ''
+  message: string = 'Ready To Login';
   
   login(): void {
+    
     this.usersvc.login(this.user.username, this.user.password ).subscribe(
       res => {
          this.systemsvc.loggedInUser = res;
-         console.debug("User:", res)
+         console.debug("User:", res);
          this.router.navigateByUrl("/requests/list");
       },
       err => {
-        this.message =  "Invalid Usernname/Password"        
-        console.error("Invalid Username/Password:", err);
-
-      }
-  )
+        this.message = "UserName/PassWord not found";       
+        console.error("Invalid", err);
+        this.systemsvc.loggedInUser = null;
+        }
+  );
   }
   constructor(
     private usersvc: UserService,

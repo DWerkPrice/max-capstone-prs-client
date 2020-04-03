@@ -11,14 +11,10 @@ import { User } from '../user.class';
 export class UserDetailComponent implements OnInit {
   
   user: User = new User();
+  isHidden: boolean = true;
 
-  myConfirm() {
-    let result = confirm("Want to delete?");
-    if (result==true) {
-     this.delete();
-    } else {
-     return false;
-    }
+  VerifyDelete() {
+    this.isHidden = false;
   }
   delete(): void {
     this.usersvc.remove(this.user).subscribe(

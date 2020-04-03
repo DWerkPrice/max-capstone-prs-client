@@ -13,7 +13,7 @@
             <th>IsAdmin</th>
 
         </tr>
-        <tr *ngFor="let u of users | userSearch: searchCriteria">
+        <tr *ngFor="let u of (users | sort) | userSearch: searchCriteria">
             <td>{{u.id}}</td>
             <td>{{u.firstname}} {{u.lastname}}</td>
             <td>{{u.phone}}</td>

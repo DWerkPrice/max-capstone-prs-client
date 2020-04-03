@@ -56,9 +56,8 @@
     
         <tr>
             <td colspan="2">
-                <input onclick="return myConfirm();" type="submit" name="deleteUser" class="btn btn-danger" value="Delete">
-         <!--       <a href="delete()" onclick="return confirm('Are you sure you want to Remove?');">Remove</a>
-                <button (click)="delete()" class = "btn btn-danger">Delete</button>  -->
+                <button (click)="VerifyDelete()" class = "btn btn-danger">Delete</button>|
+                <button [hidden]="isHidden" (click)="delete()" class = "btn btn-danger">Verify Delete</button>  
             </td>
         </tr>
     </table>
